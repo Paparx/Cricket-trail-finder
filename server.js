@@ -17,7 +17,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // For any other request, serve index.html (supporting SPA routing if added later)
-app.get('*', (req, res) => {
+app.get((req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
